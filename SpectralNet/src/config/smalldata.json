@@ -1,0 +1,58 @@
+{
+    "dataset": "smalldata",
+    "n_clusters": 2,
+    "is_sparse_graph": false,
+    "should_use_ae": true,
+    "should_use_siamese": true,
+    "should_check_generalization": false,
+    "ae": {
+        "architecture": {
+            "hidden_dim1": 500,
+            "hidden_dim2": 500,
+            "hidden_dim3": 2000,
+            "output_dim": 10
+        },
+        "epochs": 100,
+        "n_samples": 680,
+        "lr": 0.015,
+        "lr_decay": 0.1,
+        "min_lr": 1e-7,
+        "patience": 5,
+        "batch_size": 256
+    },
+    "siamese": {
+        "architecture": {
+            "n_layers": 4,
+            "hidden_dim1": 512,
+            "hidden_dim2": 256,
+            "output_dim": 128
+        },
+        "epochs": 70,
+        "n_samples": 680,
+        "lr": 1e-3,
+        "lr_decay": 0.1,
+        "min_lr": 1e-7,
+        "patience": 10,
+        "n_neighbors": 10,
+        "use_approx": true,
+        "batch_size": 128
+    },
+    "spectral": {
+        "architecture": {
+            "n_layers": 4,
+            "hidden_dim1": 64,
+            "hidden_dim2": 64,
+            "output_dim": 2
+        },
+        "epochs": 40,
+        "lr": 1e-2,
+        "lr_decay": 0.1,
+        "min_lr": 1e-5,
+        "batch_size": 50,
+        "n_neighbors": 8,
+        "scale_k": 2,
+        "is_local_scale": false,
+        "n_clusters": 2,
+        "patience": 10
+    }
+}
