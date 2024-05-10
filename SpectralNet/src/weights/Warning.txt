@@ -1,0 +1,1 @@
+Please delete the file of '.pth' when you want to train a new dataset or when you want to re-train a dataset's weights
