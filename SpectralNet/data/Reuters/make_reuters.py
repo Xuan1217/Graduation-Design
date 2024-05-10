@@ -15,7 +15,7 @@ def make_reuters_data():
   from sklearn.feature_extraction.text import CountVectorizer
   did_to_cat = {}
   cat_list = ['CCAT', 'GCAT', 'MCAT', 'ECAT']
-  with open('../reuters/rcv1-v2.topics.qrels') as fin:
+  with open('../Reuters/rcv1-v2.topics.qrels') as fin:
     for line in fin.readlines():
       line = line.strip().split(' ')
       cat = line[0]
@@ -36,7 +36,7 @@ def make_reuters_data():
   cat_to_cid = {'CCAT':0, 'GCAT':1, 'MCAT':2, 'ECAT':3}
   del did
   for dat in dat_list:
-    with open('../reuters/'+dat) as fin:
+    with open('../Reuters/'+dat) as fin:
       for line in fin.readlines():
         if line.startswith('.I'):
           if 'did' in locals():
